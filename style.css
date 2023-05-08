@@ -1,0 +1,28 @@
+
+/* body{
+    width: 1200px;
+    margin: 0 auto;
+} */
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.col{
+    width: 200px;
+}
+.col img{
+    width: 100%;
+    
+}
+.image-gallery{
+
+}
+h1{
+    text-align: center;
+    
+}

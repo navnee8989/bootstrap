@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+
+    <h1>Image-Gallary using bootStap And JAvascript</h1>
+    <div class="container text-center">
+      <div class="row align-items-center image-gallery">
+        <div class="col">
+         <img src="./Images/berries-2277.jpg" alt="">
+        </div>
+        <div class="col">
+          <img src="./Images/berries-2277.jpg" alt="">
+        </div>
+        <div class="col">
+          <img src="./Images/bird-1045954.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="container text-center">
+      <div class="row align-items-center image-gallery">
+        <div class="col">
+         <img src="./Images/buildings-2297210.jpg" alt="">
+        </div>
+        <div class="col">
+          <img src="./Images/ice-cream-1274894.jpg" alt="">
+        </div>
+        <div class="col">
+          <img src="./Images/eurasian-pygmy-owl-7534220.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="container text-center">
+      <div class="row align-items-center image-gallery">
+        <div class="col">
+         <img src="./Images/bird-1045954.jpg" alt="">
+        </div>
+        <div class="col">
+          <img src="./Images/building-102840.jpg" alt="">
+        </div>
+        <div class="col">
+          <img src="./Images/comma-7932755.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <script>
+      const images = document.querySelectorAll(".image-gallery img");
+
+      images.forEach((image) => {
+        image.addEventListener("mouseover", () => {
+          // Set the opacity of all images to a lower value
+          images.forEach((img) => {
+            if (img !== image) {
+              img.style.opacity = "0.5";
+            }
+          });
+          // Set the opacity of the hovered image to 1
+          image.style.opacity = "1";
+          // Add some animation or transition effects
+          image.style.transform = "scale(1.2)";
+          image.style.transition =
+            "opacity 0.3s ease-in-out, transform 0.3s ease-in-out";
+        });
+        // Reset the image styles when the mouse leaves
+        image.addEventListener("mouseleave", () => {
+          images.forEach((img) => {
+            img.style.opacity = "1";
+            img.style.transform = "scale(1)";
+            img.style.transition =
+              "opacity 0.3s ease-in-out, transform 0.3s ease-in-out";
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
